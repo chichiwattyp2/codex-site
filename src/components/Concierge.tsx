@@ -168,8 +168,7 @@ const Concierge: React.FC<Props> = ({ strains, onAddToCart }) => {
       setIsCameraActive(true);
       setStatus('Camera active. Analyzing mood…');
     } catch (error) {
-      const err = error instanceof Error ? error : new Error(String(error));
-      console.error(err);
+      console.error(error);
       setStatus('Unable to access camera. You can still choose a mood manually.');
     }
   }, [ensureModels]);
